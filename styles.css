@@ -4,6 +4,24 @@
     box-sizing: border-box;
 }
 
-:root {
-    color: #0072C6;
+:root{
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    padding: 0 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
 }
