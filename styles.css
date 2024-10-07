@@ -1,27 +1,119 @@
+/* global */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
-:root{
+html {
     --white: #ffffff;
-    --black: #000000;
+    --black: #101828;
+    --dark-gray: #344054;
+    --medium-gray: #667085;
+    --soft-gray: #D0D5DD;
+    --blue: #0070FF;
+    --soft-blue: #E5EFFD;
+
+    /* 1rem = 16px (User Agent) = 100% */
+    font-size: 62.5%;
 }
 
 body {
     padding: 0 2rem;
     font-family: 'Inter', sans-serif;
+
+    /* clamp = intervalo de tamanho (mínimo, padrão e máximo) */
+    font-size: clamp(14px, 1.6rem, 2vw);
 }
 
+/* fonts */
+h1 {
+    font-size: 1.8rem;
+    display: inline;
+}
+
+th {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--medium-gray);
+}
+
+.regular {
+    font-size: 1.4rem;
+    color: var(--medium-gray);
+}
+
+.small {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline;
+}
+
+/* buttons */
+.button.white {
+    border: 2px solid var(--blue);
+    border-radius: .8rem;
+    padding: .4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* header */
 header {
     background-color: var(--white);
+    padding: 2rem 0;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+header .version {
+    display: inline;
+    color: var(--blue);
+    background-color: var(--soft-blue);
+    padding: 0.2rem 1.3rem;
+    margin: 0 1rem;
+    border-radius: 2rem;
+}
+
+header .about {
+    margin: 1rem 0;
+}
+
 header nav ul {
     display: flex;
+    list-style: none;
 }
+
+header nav ul li:nth-child(3){
+    border: 1px solid var(--soft-gray);
+    border-radius: 1rem;
+    margin: 0 1.6rem;
+}
+
+header nav ul li:nth-child(4){
+    background-color: var(--blue);
+    border-radius: 1rem;
+}
+
+header nav ul li .button {
+    color: white;
+}
+
+header nav ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    padding: 1rem 1.6rem;
+    color: var(--dark-gray);
+}
+
+header nav ul li a:hover{
+    opacity: 70%;
+}
+
