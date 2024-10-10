@@ -8,12 +8,18 @@
 
 html {
     --white: #ffffff;
+    --medium-white: #fcfcfd;
+    --dark-white: #eaecf0;
     --black: #101828;
     --dark-gray: #344054;
     --medium-gray: #667085;
     --soft-gray: #D0D5DD;
     --blue: #0070FF;
     --soft-blue: #E5EFFD;
+    --red: #eb5757;
+    --soft-red: #FDECEC;
+    --orange: #f2994a;
+    --soft-orange: #FDFBEC;
 
     /* 1rem = 16px (User Agent) = 100% */
     font-size: 62.5%;
@@ -33,7 +39,7 @@ h1 {
     display: inline;
 }
 
-th {
+small {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--medium-gray);
@@ -117,3 +123,41 @@ header nav ul li a:hover{
     opacity: 70%;
 }
 
+/* table */
+table{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+table:first-child{
+    padding: 1.3rem 0;
+    background-color: var(--medium-white);
+}
+
+th {
+    align-items: center;
+    justify-content: center;
+}
+
+
+.circle {
+    width: 8px;
+    height: 8px;
+    background-color: var(--red);
+    border-radius: 50%;
+}
+
+.tag .important {
+    background-color: var(--soft-red);
+    color: var(--red);
+    font-weight: 500;
+    border-radius: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+    padding: .5rem .8rem;
+}
