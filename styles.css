@@ -57,14 +57,21 @@ small {
 }
 
 /* buttons */
-.button.white {
-    border: 2px solid var(--blue);
+.button {
     border-radius: .8rem;
     padding: .4rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.button.white {
+    border: 2px solid var(--blue);
+}
+
+.button.blue {
+    background-color: var(--blue);
 }
 
 /* header */
@@ -141,17 +148,26 @@ th {
     justify-content: center;
 }
 
-
+/* tags */
 .circle {
     width: 8px;
     height: 8px;
-    background-color: var(--red);
     border-radius: 50%;
 }
 
-.tag .important {
-    background-color: var(--soft-red);
-    color: var(--red);
+.circle.important {
+    background-color: var(--red);
+}
+
+.circle.intermediary {
+    background-color: var(--orange);
+}
+
+.circle.normal {
+    background-color: var(--medium-gray);
+}
+
+.tag {
     font-weight: 500;
     border-radius: 2rem;
 
@@ -160,4 +176,19 @@ th {
     justify-content: center;
     gap: .6rem;
     padding: .5rem .8rem;
+}
+
+.tag.important {
+    background-color: var(--soft-red);
+    color: var(--red);
+}
+
+.tag.intermediary {
+    background-color: var(--soft-orange);
+    color: var(--orange);
+}
+
+.tag.normal {
+    background-color: var(--soft-gray);
+    color: var(--medium-gray);
 }
